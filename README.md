@@ -1,3 +1,5 @@
+## This is a project that I made following this course: [Building the Metaverse: Ultimate react three fiber course](https://www.youtube.com/watch?v=C0x_HZzaA2Y&list=PLvfQp12V0hS3EbCBw7kDNOJ1l412tzcrM)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
