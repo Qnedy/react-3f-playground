@@ -5,7 +5,7 @@ import { AnimatedBox } from '../components/AnimatedBox'
 import { Lights } from '../components/Lights'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const Pier = () => {
+const BustModel = () => {
   const model = useLoader(GLTFLoader, "./models/pier/marble_bust_01_1k.gltf")
 
   model.scene.traverse((object) => {
@@ -14,7 +14,16 @@ const Pier = () => {
     }
   })
 
-  return <primitive object={model.scene} />
+  return (
+    <group>
+      <object3D position={[2, 0, 0]}>
+        <primitive object={model.scene.clone()} />
+      </object3D>
+      <object3D position={[0, 0, 0]}>
+        <primitive object={model.scene.clone()} />
+      </object3D>
+    </group>
+  )
 }
 
 const MaterialsLesson = () => {
@@ -49,7 +58,7 @@ const Home: NextPage = () => {
         {/* <CameraOrbitController /> */}
         <OrbitControls />
         {/* <AnimatedBox /> */}
-        <Pier />
+        <BustModel />
         <Lights />
         <MaterialsLesson />
         <mesh rotation={[Math.PI * -0.5, 0, 0]} receiveShadow>
